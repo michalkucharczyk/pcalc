@@ -81,7 +81,22 @@ extern  int lineno;
                                 return(NUMBER);
                                 }
 
-[0-9]+([0-9_,]*[0-9]+)?         {
+[KMGT]                          {
+                                debug(" Memory size: [ %s ]\n", yytext);
+
+yylval.val = 1;
+                                switch (yytext[0]) {
+                                  default: break;
+                                  case 'T': yylval.val *= 1024;
+                                  case 'G': yylval.val *= 1024;
+                                  case 'M': yylval.val *= 1024;
+                                  case 'K': yylval.val *= 1024;
+                                }
+
+                                return(MEMORY_SIZE);
+                                }
+
+[0-9]+([0-9_,]*[0-9]+)?   {
                                 debug(" Decimal: [ %s ]\n", yytext);
 
                                 yylval.val = (double) dtoll(yytext);

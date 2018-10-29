@@ -107,6 +107,12 @@ Values:\n\
     0b...   Binary number\n\
     0y...   Binary number\n\
     ...     Decimal number\n\
+Suffixes (for common memory sizes):\n\
+    ...K    Kilobyte\n\
+    ...M    Megabyte\n\
+    ...G    Gigabyte\n\
+    ...T    Terabyte\n\
+\n\
 Separators (for readability):\n\
     0xFFFF_AAAA\n\
     0o777_555\n\

@@ -1,0 +1,12 @@
+// Make sure memory suffix works
+
+1_0K
+1M
+1,024K
+2T
+3G
+0xaM
+1M-5K
+1G + 128*1M - 16K
+1M + 1024
+
